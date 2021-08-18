@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CDM Java Distribution Guidelines &mdash; ISDA CDM 2.119.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ISDA CDM
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.119.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">The Common Domain Model</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ISDA CDM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CDM Java Distribution Guidelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/cdm-guidelines.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cdm-java-distribution-guidelines">
+<h1>CDM Java Distribution Guidelines<a class="headerlink" href="#cdm-java-distribution-guidelines" title="Permalink to this headline">¶</a></h1>
+<p>This section provides directions for downloading and using the Java version of CDM.  Topics covered are listed below:</p>
+<ul class="simple">
+<li>Prerequisites</li>
+<li>Introduction</li>
+<li>Setting Up Google’s Guice Injector</li>
+<li>Generating Global Keys and Qualifications</li>
+<li>Validating the CDM instance</li>
+</ul>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Java SDK 8</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The CDM in Java is built using <a class="reference external" href="https://maven.apache.org">maven</a> and is published using the REGnosys artifactory. The repository can be accessed using the maven settings file that is included in the cdm sources jar or by copying the repository information to your own settings.</li>
+<li>The CDM in Java code, a related set of examples, and a video tutorial accessing the code and loading the examples are available on the latest version of the <a class="reference external" href="https://portal.cdm.rosetta-technology.io/#">ISDA CDM Portal</a>:</li>
+</ul>
+<p>Download page for zip files of the Java code and examples</p>
+<div class="figure">
+<img alt="_images/cdm-portal.png" src="_images/cdm-portal.png" />
+</div>
+<ul>
+<li><dl class="first docutils">
+<dt>Direct links:</dt>
+<dd><p class="first"><a class="reference external" href="https://isda:isda&#64;regnosys.jfrog.io/regnosys/libs-snapshot/com/isda/cdm-distribution">ISDA CDM as Java Code</a></p>
+<p class="last"><a class="reference external" href="https://isda:isda&#64;regnosys.jfrog.io/regnosys/libs-snapshot/com/regnosys/isda-cdm-examples">ISDA CDM as Java Examples</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Tutorials</p>
+<div class="figure">
+<img alt="_images/cdm-tutorials.png" src="_images/cdm-tutorials.png" />
+</div>
+<p>Direct link: <a class="reference external" href="https://vimeo.com/359012532">Tutorials</a></p>
+<ul class="simple">
+<li>The CDM model objects are classified into namespaces (cdm.base, cdm.base.staticdata, etc). These namespaces translate into Java packages with the same name, with each package containing a package-info file.</li>
+</ul>
+<div class="figure">
+<img alt="_images/cdm-distribution.png" src="_images/cdm-distribution.png" />
+</div>
+<ul class="simple">
+<li>The CDM uses <a class="reference external" href="https://en.wikipedia.org/wiki/Builder_pattern">builder pattern</a> for each of the pojos. The distribution ships with the json to java object serialisers.</li>
+</ul>
+</div>
+<div class="section" id="setting-up-google-s-guice-injector">
+<h2>Setting Up Google’s Guice Injector<a class="headerlink" href="#setting-up-google-s-guice-injector" title="Permalink to this headline">¶</a></h2>
+<p>CDM uses <a class="reference external" href="https://github.com/google/guice">Google’s Guice</a> as a dependency manager. Injector is the core of Guice that contains the whole object graph (context).</p>
+<p>The first step is to initialise the injector. There are two options:</p>
+<div class="section" id="initialising-the-injector-option-1-using-provided-cdmruntimemodule">
+<h3>Initialising the Injector, Option 1: Using provided CdmRuntimeModule<a class="headerlink" href="#initialising-the-injector-option-1-using-provided-cdmruntimemodule" title="Permalink to this headline">¶</a></h3>
+<p>The CDM distribution comes with a pre-built CDM module that can be used to create an injector. It provides bindings to required classes (ModelObjectValidator and QualifyFunctionFactory) as well as binding in implementations for several CDM functions such as Abs, Sum</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="n">Guice</span><span class="o">.</span><span class="na">createInjector</span><span class="o">(</span><span class="k">new</span> <span class="n">CdmRuntimeModule</span><span class="o">()));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="initialising-the-injector-option-2-build-your-own-module">
+<h3>Initialising the Injector, Option 2: Build your own Module<a class="headerlink" href="#initialising-the-injector-option-2-build-your-own-module" title="Permalink to this headline">¶</a></h3>
+<p>To build a custom injector that is not based on the CDM’s runtime module, first create a Guice module with a minimum of the two bindings shown belows:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GenericModule</span> <span class="kd">extends</span> <span class="n">AbstractModule</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">bind</span><span class="o">(</span><span class="n">ModelObjectValidator</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">to</span><span class="o">(</span><span class="n">RosettaTypeValidator</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">bind</span><span class="o">(</span><span class="n">QualifyFunctionFactory</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">to</span><span class="o">(</span><span class="n">QualifyFunctionFactory</span><span class="o">.</span><span class="na">Default</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Once this module has been built it can be used to create the custom injector.</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="n">Guice</span><span class="o">.</span><span class="na">createInjector</span><span class="o">(</span><span class="k">new</span> <span class="n">GenericModule</span><span class="o">()));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="generating-global-keys-and-qualifications">
+<h2>Generating Global Keys and Qualifications<a class="headerlink" href="#generating-global-keys-and-qualifications" title="Permalink to this headline">¶</a></h2>
+<p>Within the model any data object marked with metadata key will have a Global Key generated when that data object is populated. These Global Keys are automatically generated using hash algorithms.  The model objects can be post-processed with Global Keys and qualified by using the injector created in the previous step to run the code shown below:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">Contract</span> <span class="n">cdmInstance</span> <span class="o">=</span> <span class="n">buildCdmInstance</span><span class="o">();</span>
+<span class="n">Contract</span><span class="o">.</span><span class="na">ContractBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="n">cdmInstance</span><span class="o">.</span><span class="na">toBuilder</span><span class="o">();</span>
+<span class="n">keyProcessor</span><span class="o">.</span><span class="na">runProcessStep</span><span class="o">(</span><span class="n">Contract</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">builder</span><span class="o">);</span>
+<span class="n">Contract</span> <span class="n">updatedCdmInstance</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">build</span><span class="o">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="validating-the-cdm-instance">
+<h2>Validating the CDM instance<a class="headerlink" href="#validating-the-cdm-instance" title="Permalink to this headline">¶</a></h2>
+<p>In order to validate the CDM instance, it is necessary to create a RosettaTypeValidator and post process the instance as follows:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">RosettaTypeValidator</span> <span class="n">validator</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">RosettaTypeValidator</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="n">ValidationReport</span> <span class="n">validationReport</span> <span class="o">=</span> <span class="n">validator</span><span class="o">.</span><span class="na">runProcessStep</span><span class="o">(</span><span class="n">cdmInstance</span><span class="o">.</span><span class="na">getClass</span><span class="o">(),</span> <span class="n">cdmInstance</span><span class="o">.</span><span class="na">toBuilder</span><span class="o">());</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">validationReport</span><span class="o">.</span><span class="na">success</span><span class="o">())</span> <span class="o">{</span>
+  <span class="n">List</span><span class="o">&lt;</span><span class="n">ValidationResult</span><span class="o">&lt;?&gt;&gt;</span> <span class="n">validationResults</span> <span class="o">=</span> <span class="n">validationReport</span><span class="o">.</span><span class="na">validationFailures</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>If the validation is unsuccessful then the validation results object will contain the list of all the validation failures.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2020, ISDA.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.119.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

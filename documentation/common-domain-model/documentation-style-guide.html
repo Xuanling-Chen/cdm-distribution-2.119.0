@@ -1,0 +1,555 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CDM Documentation Style Guide &mdash; ISDA CDM 2.119.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ISDA CDM
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.119.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">The Common Domain Model</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ISDA CDM</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CDM Documentation Style Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/documentation-style-guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cdm-documentation-style-guide">
+<h1>CDM Documentation Style Guide<a class="headerlink" href="#cdm-documentation-style-guide" title="Permalink to this headline">¶</a></h1>
+<p>The purpose of this section is to provide form and substance recommendations for editors of CDM documentation. “Documentation” in this context means any form of written guidance to CDM users and includes:</p>
+<ul class="simple">
+<li>the CDM user documentation</li>
+<li>release notes provided with each CDM release</li>
+<li>any description developed in the logical model itself, which includes:<ul>
+<li>data types and attributes</li>
+<li>enumerations</li>
+<li>functions and rules</li>
+<li>test descriptions</li>
+<li>any other areas of the logical model where a textual description may be provided</li>
+</ul>
+</li>
+</ul>
+<p>The intended audience for the CDM documentation includes software developers, data modelers, legal experts, business experts, and other subject matter experts who may have expertise in one area related to financial products, but are not experts in every area.</p>
+<p>The baseline for the recommendation is standards for spelling, punctuation, and other style rules applicable to British English. The recommendation in this document extends this rule set with a set of guidelines applicable to documentation for logical models. The recommendation does not provide an exhaustive list of all of the standard British English rules, but provides selective examples that are common to documentation in general.</p>
+<p>Writing and editing style is subjective and a matter of personal preferences, rather than right or wrong. The following guidelines are intended to ensure that the documentation provides consistent styling, regardless of who writes it, but should not be interpreted as an authoritative source on “good” styling.</p>
+<p>Unless otherwise noted, the recommended rules apply to all forms of CDM documentation. When rules are applicable only to certain forms of documentation (for instance, the logical model descriptions or the release notes), they will be specified as such.</p>
+<div class="section" id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-cdm">
+<h3>The CDM<a class="headerlink" href="#the-cdm" title="Permalink to this headline">¶</a></h3>
+<p>The model should be referred to as <em>the CDM</em>, without any ownership mention. The only exception is the <a class="reference external" href="https://docs.rosetta-technology.io/cdm/readme.html">Overview of the ISDA CDM</a> section at the beginning of the user documentation when the CDM is introduced as <em>the ISDA CDM</em>.</p>
+</div>
+<div class="section" id="general-data-definition-components">
+<h3>General data definition components<a class="headerlink" href="#general-data-definition-components" title="Permalink to this headline">¶</a></h3>
+<p>The two data definition components should be referred to as follows:</p>
+<ol class="arabic simple">
+<li><em>Data type</em>: defines an entity with a description, attributes, and where applicable, conditions.<ol class="arabic">
+<li>Not <em>type</em>.</li>
+<li>Not <em>class</em>: although these are appropriate terms for some of the distributions of the CDM into other languages, they are not applicable for all.</li>
+</ol>
+</li>
+<li><em>Attribute</em>: defines a member of a data type.<ol class="arabic">
+<li>Not <em>field</em>.</li>
+<li>Not <em>element</em>.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="specific-components">
+<h3>Specific components<a class="headerlink" href="#specific-components" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="product">
+<h4>Product<a class="headerlink" href="#product" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><em>Financial Product</em>. The user documentation defines <a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#financial-product">Financial Product</a> as the highest level of the hierarchy of the universe of products. The term <em>Financial Product</em> should be used consistently throughout the documentation and wherever applicable in the model descriptions when describing the broad set of products.</li>
+<li><em>Contractual Product</em>. Similarly, <a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#contractual-product">Contractual Product</a> is defined as a subset of Financial Products and should be used consistently in any documentation.<ol class="arabic">
+<li>Not <em>Derivatives</em>.</li>
+<li>Not <em>OTC</em>. Contractual Product is at a higher hierarchy level than OTC Derivatives because it can include other types of products such as Security Financing.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="event">
+<h4>Event<a class="headerlink" href="#event" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><em>Business Event</em>. In the CDM, a <a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#business-event">Business Event</a> represents an event that may occur during the lifecycle of a trade, such as an amendment, a termination, a reset or a payment.<ol class="arabic">
+<li>Not <em>Lifecycle Event</em>. the term <em>Business Event</em> should be consistently used when referring to these data structures in the CDM documentation.</li>
+</ol>
+</li>
+<li><em>Primitive Event</em>. In the CDM, a <a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#primitive-event">Primitive Event</a> represents a building block component used to specify business events in the CDM.<ol class="arabic">
+<li>Not <em>Primitive</em> (stand-alone). In the CDM documentation, the word <em>Primitive</em> always needs to be qualified with <em>Event</em>, because the word <em>Primitive</em> may be associated to very different meanings, e.g. in computing.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="content">
+<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="completeness">
+<h3>Completeness<a class="headerlink" href="#completeness" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="user-documentation">
+<h4>User Documentation<a class="headerlink" href="#user-documentation" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>The user documentation should provide an applicable introduction and should have a section for every primary component of the CDM.</li>
+<li>Each section should provide enough business context and explanations of the model so that the average reader in the target audience understands the purpose of the component and its role in the model.</li>
+<li>Each section should have at least one example of a data structure</li>
+</ol>
+</div>
+<div class="section" id="logical-model">
+<h4>Logical Model<a class="headerlink" href="#logical-model" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Every data type, attribute, enumerated value, function, and test should have a description that describes its purpose in the context of the CDM.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="accuracy">
+<h3>Accuracy<a class="headerlink" href="#accuracy" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Descriptions should accurately describe the current state of the model. This seems obvious, but there are many possible ways for introducing misalignments, including: an anticipated change never occurred, or the author incorrectly interpreted the structure, or the data structure changed while the documentation or description was not updated.</li>
+<li>Subtasks in a design process should include an assessment of documentation and descriptions that will be required to be changed or created, and should include the content.</li>
+<li>A release checklist should verify that the affected documentation and descriptions are completed accordingly.</li>
+</ol>
+</div>
+<div class="section" id="content-guidelines">
+<h3>Content Guidelines<a class="headerlink" href="#content-guidelines" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="general-guidelines">
+<h4>General guidelines<a class="headerlink" href="#general-guidelines" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Data Definition components (e.g. data types, attributes, enumerations and enumerated values) should be explained in business terms.<ol class="arabic">
+<li>The description of objects in the model should begin with the purpose of the object. The purpose should explain what the object is, not “what it is not”.</li>
+<li>Data type description should begin with a verb that describes what the type does.</li>
+<li>The logical model identifies data types without needing a description, therefore, the description should not begin with a phrase like: “A data type that does…”</li>
+<li>Attribute description should articulate the use of the type in the context of the attribute.</li>
+<li>The description should not be tautological, e.g. PartyRole &lt;defines the party role&gt; is not compliant with these guidelines.</li>
+<li>References to a similar attribute in  FpML should not be used as a crutch in place of explaining a data type, attribute, etc.</li>
+<li>In most cases, where a reference to FpML is considered useful, it should be placed at the end of a description in the logical model, or in a note at the end of a section in the user documentation.  In the case of the logical model, note that synonyms for FpML are provided, therefore it should not be necessary to reference FpML in every case.</li>
+</ol>
+</li>
+</ol>
+<p>Example of a non-compliant description:</p>
+<div class="highlight-sourcecode notranslate"><div class="highlight"><pre><span></span>&lt;&quot;A data type to represent a financial product. With respect to contractual products, this class specifies the pre-execution product characteristics (the ContractualProduct class). This class is used as underlying for the option exercise representation, which makes use of the contractualProduct attribute to support the swaption use case, with the exercise into a swap. In a complete workflow, the swaption contract itself then needs to be superseded by a swap contract underpinned by the exercised swap as a contractualProduct.&quot;&gt;
+</pre></div>
+</div>
+<p>Instead a compliant description would state:</p>
+<div class="highlight-sourcecode notranslate"><div class="highlight"><pre><span></span>&lt;&quot;Represents a financial product. With respect to a contractual products, this data type specifies the pre-execution product characteristics...”&gt;
+</pre></div>
+</div>
+<p>Another non-compliant example:</p>
+<div class="highlight-sourcecode notranslate"><div class="highlight"><pre><span></span>&lt;&quot;This class corresponds to the FpML CalculationAgent.model.&quot;&gt;
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>The description of data objects or the overall model should be focused on the current state, there should be no reference to the history of the model or a future state.<ol class="arabic">
+<li>The history of the model is not relevant in this context. It is sufficient to describe how the model currently works.</li>
+<li>Forward-looking statements can create a perception that the product is not finished, and become a distraction to explaining what the product does. Moreover, these future plans may never materialise.</li>
+<li>Given these rules, phrases such as “the model currently does….” should be excluded because any documentation must be a description of what the model currently does.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="heading-styles-and-flow-in-the-user-documentation">
+<h4>Heading styles and flow in the user documentation<a class="headerlink" href="#heading-styles-and-flow-in-the-user-documentation" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Heading styles. The user documentation is edited in the <em>RST (reStructured Text)</em> mark-up language, which is then rendered into Html in the CDM documentation website using <em>Sphinx</em>. For headings to be rendered with the correct structure, they should be annotated according to the following table:<ol class="arabic">
+<li>If using a header to identify a section to describe a component, then use headers to describe other components that are at the same level.</li>
+<li>Sub-headings should have a name distinct from the higher level heading. e.g. if Legal Agreement is the Heading Level 2, then there should not be a heading at level 3 or 4 with the exact same title.</li>
+</ol>
+</li>
+</ol>
+<table border="1" class="colwidths-given docutils" id="id1">
+<caption><span class="caption-text">Heading Styles</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="12%" />
+<col width="29%" />
+<col width="29%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Heading Level</th>
+<th class="head">Notation (underline in .rst)</th>
+<th class="head">Relative font size (as seen by users)</th>
+<th class="head">Section Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td><code class="code docutils literal notranslate"><span class="pre">===============</span></code></td>
+<td>XL font and bold</td>
+<td><a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#">The Common Domain Model</a></td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td><code class="code docutils literal notranslate"><span class="pre">---------------</span></code></td>
+<td>L font and bold</td>
+<td><a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#product-model">Product Model</a>, <a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#legal-agreements">Legal Agreements</a></td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td><code class="code docutils literal notranslate"><span class="pre">^^^^^^^^^^^^^^^</span></code></td>
+<td>M font and bold</td>
+<td><a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#tradableproduct">Tradable Product</a></td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td><code class="code docutils literal notranslate"><span class="pre">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span></code></td>
+<td>S font (same as content), but bold</td>
+<td><a class="reference external" href="https://docs.rosetta-technology.io/cdm/documentation/source/documentation.html#pricequantity">Price Quantity</a></td>
+</tr>
+</tbody>
+</table>
+<p>The RST editing syntax in which the user documentation is written is a standard web mark-up language, for which a reference guide can be found at: <a class="reference external" href="https://sublime-and-sphinx-guide.readthedocs.io">https://sublime-and-sphinx-guide.readthedocs.io</a></p>
+<ol class="arabic simple" start="2">
+<li>Logical organization and order:<ol class="arabic">
+<li>The user documentation should walk the user through the model from the top down, beginning at a description of the primary components.</li>
+<li>Levels 1 and 2 should include a bullet point list of the sub sections that will be described (bullets formatted with the insertion of an asterisk followed by a space).</li>
+</ol>
+</li>
+<li>Define business terms and CDM terminology early in a section so that the broader audience understands the model.</li>
+<li>Details about a topic should be presented in the section for that topic:<ol class="arabic">
+<li>In the case of a model component, the description of the component should always be followed by an example.</li>
+<li>Most or all of the explanation should occur before the example, not after, unless the example was needed as context for an explanation.</li>
+<li>Transitions from one topic to another should be used to help guide the user through the model.</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="content-of-release-notes">
+<h4>Content of Release Notes<a class="headerlink" href="#content-of-release-notes" title="Permalink to this headline">¶</a></h4>
+<p>Release notes are text describing the content of any new CDM release and are a critical component of the distribution of that release. Release notes are edited in the <em>Mark-Down (MD)</em> syntax, which is then rendered into Html in the various channels where the release is published.</p>
+<ol class="arabic simple">
+<li>release notes should begin with a high-level headline of the part of the model being changed, followed by “–” and a short headline description<ol class="arabic">
+<li>For example: “# Legal Agreement Model - Collateral Agreement Elections”</li>
+</ol>
+</li>
+<li>They should provide enough detail for a reviewer or other interested parties to be able to find and evaluate the change. For a data model change, for example, the data type and attributes should be named and the before/after states of the model explained, along with a justification in which the issue is summarised.</li>
+<li>If the release notes describe mapping rules, there should be explicit information about the examples affected and the change in resulting values for those examples.</li>
+<li>If the release is documentation, it should specify exactly where the document was changed and why.</li>
+<li>Special formatting rules related to use of the MD mark-up language:<ol class="arabic">
+<li>Headline should begin with a <code class="docutils literal notranslate"><span class="pre">#</span></code>, as in the above example, so that it appears correctly formatted in Html</li>
+<li><code class="docutils literal notranslate"><span class="pre">*</span></code> before and after text (no space) for bold</li>
+<li><code class="docutils literal notranslate"><span class="pre">_</span></code> before and after text (no space) for italics</li>
+<li><code class="docutils literal notranslate"><span class="pre">–</span></code> (plus a space) for bullets</li>
+<li>Backticks <code class="docutils literal notranslate"><span class="pre">`</span></code> before and after model components, e.g. data types, attributes, enums, function names, etc. for special code-style formatting</li>
+</ol>
+</li>
+</ol>
+<p>Example release notes formatted in MD:</p>
+<div class="highlight-MD notranslate"><div class="highlight"><pre><span></span><span class="gh">#</span> *CDM Model: Expanded set of enumerations in RegulatoryRegimeEnum*
+
+<span class="ge">_What is being released_</span>
+
+Additional regimes have been added to the <span class="sb">`RegulatoryRegimeEnum`</span> which is used to express the required regimes for initial margin documentation. The <span class="sb">`RegulatoryRegimeEnum`</span> is used as an enumeration for attributes in the <span class="sb">`ApplicableRegime`</span> and <span class="sb">`SubstitutedRegime`</span> data types within the legal agreements model.
+
+The new enumerated values are <span class="sb">`BrazilMarginRules`</span>, <span class="sb">`UnitedKingdomMarginRules`</span>, <span class="sb">`SouthAfricaMarginRules`</span>, <span class="sb">`SouthKoreaMarginRules`</span>, and <span class="sb">`HongKongSFCMarginRules`</span>, all of which have come into force in January 2021.  Each of these enumerated values has a complete description that uses the text provided in the relevant regulatory supplement.
+
+<span class="ge">_Review directions_</span>
+
+In the CDM Portal select the Textual Browser, search for ‘ApplicableRegime’ and ‘SubstitutedRegime’, click on the ‘RegulatoryRegimeEnum’ next to the ‘regime’ attribute and observe the expanded list of regimes, including the ones noted above.
+</pre></div>
+</div>
+<p>The MD editing syntax in which release notes are written is a standard web mark-up language, for which a reference guide can be found at: <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">https://www.markdownguide.org/cheat-sheet/</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The MD syntax provides similar features to the RST syntax (used to edit the user documentation), but the special formatting characters are slightly different between the two. While RST allows richer features that are useful for a full documentation website, MD is preferred for release notes because Slack supports (a subset of) the MD language and can therefore serve as a release publication channel.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="style">
+<h2>Style<a class="headerlink" href="#style" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="content-style">
+<h3>Content style<a class="headerlink" href="#content-style" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Content should be correct with regard to grammar, punctuation, and spelling (in British English), including but not limited to the following rules:<ol class="arabic">
+<li>Grammatical agreement, e.g. data types need, not data types needs</li>
+<li>Punctuation:<ol class="arabic">
+<li>etc. requires a period.</li>
+<li>Complete sentences should end with a period or colon (there should be no need for a question mark or exclamation point in these artefacts).</li>
+<li>Incomplete sentences cannot end with a punctuation.  For example, “Through the <code class="docutils literal notranslate"><span class="pre">legalAgreement</span></code> attribute the CDM provides support for implementors to:” is an incomplete sentence and cannot end in a punctuation. This can be fixed by adding a few words, e .g. “Through the <code class="docutils literal notranslate"><span class="pre">legalAgreement</span></code> attribute the CDM provides support for implementors to do the following:”</li>
+<li>Always use the Oxford Comma (aka the Serial Comma) for clarity when listing more than two items in a sentence, e.g. “data types, attributes, and enumerated values.”  In extreme cases, failure to use this comma could be costly.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Other grammatical rules<ol class="arabic">
+<li>Agreement of numbers:  For example, if one sentence reads “the following initiatives…” , then it should be followed by more than one.</li>
+<li>Sentences should not end with a preposition<ol class="arabic">
+<li>Non-compliant example: “..to represent the party that the election terms are being defined for.”</li>
+<li>Compliant: “…to represent the party or parties for which the election terms are being defined.”</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>When a name or phrase is defined - continue to use it unless an alias has been defined. For example, one section reviewed had an expression “agreement specification details” but then switched to using “agreement content” without explanation. There is sufficient terminology to absorb, as such there is no need for synonyms or aliases, unless there are commonly used terms, in which case, they should be defined and one term should be used consistently.</li>
+<li>User Documentation and descriptions should always be in the third person, for example: “the CDM model provides the following…”. Never use the first person (including the use of “we”).</li>
+<li>In the user documentation, when there is a need for a long list, use bullets (<code class="docutils literal notranslate"><span class="pre">*</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code> followed by space, then text) as opposed to long sentences.</li>
+<li>To the extent possible, use simple direct sentence structures, e.g. replace “An example of such” with “For example”, or replace “Proposals for amendment to the CDM can be created upon the initiative of members of a Committee or by any users of CDM within the community who are not a current Committee member.” with “Committee members or any user of CDM within the community can propose amendments to the CDM.”</li>
+<li>Exclude the usage of “mean to”, “intends to”, or “looks to”.<ol class="arabic">
+<li>For example, “the model looks to use strong data type attributes such as numbers, boolean or enumerations whenever possible.”</li>
+<li>Either the object works as designed or it does not. This expression might be used in a bug report when describing a function not working as intended but not to describe a production data model.</li>
+</ol>
+</li>
+<li>Explain the CDM objects in an honest and transparent manner, but without criticism of the model. Sentences such as: “…which firms may deem inappropriate and may replace by…” or “the model is incomplete with regards to…” are unnecessary in a documentation. Rather, issues which may be identified in the CDM should be raised and addressed via the CDM governance structure.</li>
+</ol>
+</div>
+<div class="section" id="special-format-for-cdm-objects">
+<h3>Special format for CDM objects<a class="headerlink" href="#special-format-for-cdm-objects" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Data types and attributes display rules:<ol class="arabic">
+<li>Data types and attributes should be identified in the editor with code quotes, where the text between the quotes will appear in a special block format as illustrated here: <code class="docutils literal notranslate"><span class="pre">LegalAgreementBase</span></code>.</li>
+<li>If the same word or phrase is used in a business context, as part of an explanation, then the words should be spaced and titled normally and the special format is not required: e.g. “Tradable products are represented by…”.</li>
+</ol>
+</li>
+<li>Code snippets should be preceded by the string: <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">Language</span></code> (where the Language could be any of Haskell, Java, JSON, etc.), followed by a line spacing before the snippet itself. The entire snippet should be indented with one space, to be identified as part of the code block and formatted appropriately. Indentation can be produced inside the snippet itself using further double space. Meta-data such as data type descriptions or synonyms that appear in the CDM should be excluded from the code snippet, unless the purpose of the snippet is to illustrate those.</li>
+</ol>
+<p>Example of how a code snippet should be edited in the documentation:</p>
+<div class="highlight-MD notranslate"><div class="highlight"><pre><span></span>.. code-block:: Haskell
+
+ type EventEffect:
+   effectedTrade TradeState (0..*)
+     [metadata reference]
+   trade TradeState (0..*)
+     [metadata reference]
+   productIdentifier ProductIdentifier (0..*)
+     [metadata reference]
+   transfer TransferPrimitive (0..*)
+     [metadata reference]
+</pre></div>
+</div>
+<p>And the result will be rendered as:</p>
+<div class="highlight-Haskell notranslate"><div class="highlight"><pre><span></span><span class="kr">type</span> <span class="kt">EventEffect:</span>
+  <span class="n">effectedTrade</span> <span class="kt">TradeState</span> <span class="p">(</span><span class="mi">0</span><span class="o">..*</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">metadata</span> <span class="n">reference</span><span class="p">]</span>
+  <span class="n">trade</span> <span class="kt">TradeState</span> <span class="p">(</span><span class="mi">0</span><span class="o">..*</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">metadata</span> <span class="n">reference</span><span class="p">]</span>
+  <span class="n">productIdentifier</span> <span class="kt">ProductIdentifier</span> <span class="p">(</span><span class="mi">0</span><span class="o">..*</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">metadata</span> <span class="n">reference</span><span class="p">]</span>
+  <span class="n">transfer</span> <span class="kt">TransferPrimitive</span> <span class="p">(</span><span class="mi">0</span><span class="o">..*</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">metadata</span> <span class="n">reference</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Code snippets that appear in the user documentation are being compared against actual CDM components during the CDM build process, and any mismatch will trigger an error in the build. This mechanism ensures that the user documentation is kept in sync with the model in production prior to any release.</p>
+</div>
+</div>
+<div class="section" id="fonts-text-styles-and-spaces">
+<h3>Fonts, Text Styles, and Spaces<a class="headerlink" href="#fonts-text-styles-and-spaces" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Bold should be used sparingly:<ol class="arabic">
+<li>Only in the beginning of a section when there is a salient point to emphasize, like a tag line - the bold line should be syntactically complete and correct.</li>
+<li>In the editor, bold is specified with double asterisks before and after the word or phrase.</li>
+</ol>
+</li>
+<li>Italics<ol class="arabic">
+<li>Italics should be used when defining an unusual term for the first time rather than using quotes, for example to identify something CDM specific, such as the concept of Primitive Events.</li>
+<li>In the editor, italics is specified with a single asterisk <code class="docutils literal notranslate"><span class="pre">*</span></code> before and after the word or phrase.</li>
+</ol>
+</li>
+<li>Single space should be used in-between sentences, not double space.</li>
+</ol>
+</div>
+<div class="section" id="style-references-for-additional-guidance">
+<h3>Style references for additional guidance<a class="headerlink" href="#style-references-for-additional-guidance" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://global.oup.com/academic/product/new-harts-rules-9780199570027">New Hart’s Rules</a>: An updated version of this erstwhile comprehensive style guide for writers and editors using British English, published by the Oxford University Press. Invaluable as an official reference on proofreading and copy-editing.  Subjects include spelling, hyphenation, punctuation, capitalisation, languages, law, science, lists, and tables. An earlier version coined the phrase Oxford Comma in July 1905.</li>
+<li><a class="reference external" href="https://www.lynnetruss.com/books/eats-shoots-leaves/">Eats, Shoots &amp; Leaves: The Zero Tolerance Approach to Punctuation</a>:  A light-hearted book with a serious purpose regarding common problems and correctness for using punctuation in the English language.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2020, ISDA.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.119.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>
